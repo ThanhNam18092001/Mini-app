@@ -1,0 +1,15 @@
+mixin AboutProject(data) 
+    include ../components/button.pug
+    .container 
+        .project-about-content
+            .row 
+                .col-xl-4.col-lg-4.col-md-3.col-sm-12.col-12
+                    .section-title-about( data-aos="fade-up" data-aos-duration="1000") 
+                        h3.title=data.title 
+                .col-xl-8.col-lg-8.col-md-9.col-sm-12.col-12
+                    .section-body-about( data-aos="fade-up" data-aos-duration="1200")   
+                        p.description=data.desc 
+                        if data.button 
+                            +Button({ title: 'Launch project', icon: './assets/icons/arrow-left-green.svg', className: 'brand-green-outline', isReverse: true })
+            .image-description-project 
+                img(src=`${data.imageProject}`, alt=`${data.imageProject}`)

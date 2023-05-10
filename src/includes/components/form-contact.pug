@@ -1,0 +1,37 @@
+include ../components/input.pug
+include ../components/button.pug
+include ../components/select.pug
+mixin FormContact()
+    section.section-contact-form 
+        .row 
+            .col-xl-8.col-lg-10.col-md-12.col-sm-12.col-12.m-auto
+                .section-body-title 
+                    h2.title( data-aos="fade-up" data-aos-duration="2000") 
+                        img(src="./assets/icons/Waving Hand Medium Skin Tone.svg", alt="Waving Hand Medium Skin Tone")
+                        | Whether it’s for a project, for more information about our services or just to say hello, please don’t hesitate
+                        |  to get in touch.
+                form( method="post" action="" id="form-contact" enctype="multipart/form-data")
+                    .row 
+                        .col-xl-12.col-lg-12.col-md-12.col-sm-12.col-12 
+                            +Select({label: "Choose your area"})
+                        .col-xl-6.col-lg-6.col-md-6.col-sm-12.col-12
+                            +Input({label: 'Your Name', type: 'text', placeholder: 'Your Name', required: true})
+                        .col-xl-6.col-lg-6.col-md-6.col-sm-12.col-12
+                            +Input({label: 'Your email address', type: 'text', placeholder: 'daop37566@gmail.com', required: true})
+                        .col-xl-12.col-lg-12.col-md-12.col-sm-12.col-12
+                            +Select({label: "Project budget (USD)"})
+                        .col-xl-12.col-lg-12.col-md-12.col-sm-12.col-12
+                            +Input({label: 'Tell us about your project', type: 'text', placeholder: 'Describe your project'})
+                        .col-xl-12.col-lg-12.col-md-12.col-sm-12.col-12
+                            .attachment-file.browse-files 
+                                label(for="attachment-file").upload-attachment 
+                                    img(src="./assets/icons/attachment.svg", alt="attachment") 
+                                    span Attachment
+                                input(type="file" class="d-none" id="attachment-file" name="attachment" multiple)
+                                .file-block
+                        .col-xl-12.col-lg-12.col-md-12.col-sm-12.col-12 
+                            .btn-submit-form 
+                                +Button({ typeInput: 'submit', title: 'Submit', icon: './assets/icons/arrow-left.svg', className: 'brand-green', isReverse: true })
+
+
+

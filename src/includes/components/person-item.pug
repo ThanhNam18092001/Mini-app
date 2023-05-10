@@ -1,0 +1,6 @@
+mixin PersonItem(data)
+    .swiper-slide.person-item.portfolio-grid-item(data-cursor="Drag")  
+        .item-avatar 
+            img(src=`${data.avatar}`, alt="avatar")
+        h3.item-name=data.name
+        h6.item-position=data.position 

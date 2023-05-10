@@ -1,0 +1,68 @@
+.section-project-about  {
+    @include breakpoint(768) { 
+        margin: 80px 0;
+    }
+    .project-about-content {
+        font-family: 'Syne';
+        font-size: 18px;
+        margin: 0 auto;
+        &:last-child{
+            padding-top:120px;
+            @include breakpoint(768) {
+                padding-top:0;
+            }
+            @include breakpointminmax(687,1199) {
+                padding-top:120px;
+            }
+        }
+        
+        @include breakpoint(768) {
+            text-align: center;
+            margin-top: 56px;
+        }
+        .section-title-about {
+            font-family: 'Syne';
+            font-style: normal;
+            .title {
+                font-weight: 400;
+                font-size: 40px;
+                line-height: 140%;
+                color: #141414;
+                margin-bottom: 12px;
+                @include breakpoint(992) {
+                    font-size: 14px;
+                    color: #9D9D9D;
+                }
+            }
+        }
+        
+        .section-body-about {
+            .description {
+                font-family: 'Syne';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 130%;
+                color: #141414;
+                margin-bottom: 40px;
+                @include breakpoint(768) { 
+                    font-size: 16px;
+                }
+            }
+            @include breakpoint(768) {
+                .button-component {
+                   margin: auto;
+                }
+            }
+        }
+        .image-description-project {
+            margin-top: 120px;
+            @include breakpoint(768) {
+                margin-top: 56px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+// example: @include rem("font-size", 14);
+
+@mixin rem($property, $values...) {
+  $n: length($values);
+  $i: 1;
+  $remlist: ();
+  @while $i <= $n {
+    $itemVal: (nth($values, $i));
+    @if $itemVal != "auto" {
+      $remlist: append($remlist, ($itemVal / 16) + rem);
+    } @else {
+      $remlist: append($remlist, auto);
+    }
+    $i: $i + 1;
+  }
+  #{$property}: $remlist;
+}

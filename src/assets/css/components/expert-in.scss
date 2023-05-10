@@ -1,0 +1,34 @@
+.expert-company {
+    font-family: 'Syne';
+    font-style: normal;
+    .expert-name {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 130%;
+        color: #141414;
+        @include breakpoint(992) { 
+            margin-bottom: 40px;
+        }
+    }
+    .expert-in-item  {
+        display: flex;
+        margin-bottom: 8px;
+        img {
+            transform: translateY(10px);
+            @include breakpoint(992) { 
+                transform: translateY(0px);
+            }
+        }
+        .item-title {
+            font-weight: 500;
+            font-size: 64px;
+            line-height: 110%;
+            letter-spacing: 0.01em;
+            color: #141414;
+            margin-left: 24px;
+            @include breakpoint(992) { 
+                font-size: 40px;
+            }
+        }
+    }
+}

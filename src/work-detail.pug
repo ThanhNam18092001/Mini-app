@@ -1,0 +1,25 @@
+extends includes/layout/layout.pug
+block pages 
+    section.banner-work-detail.tt-section(style="background-image: url('./assets/images/banner-work-detail.png')")
+        .container 
+            .work-detail-content 
+                h1.content-title( data-aos="fade-up" data-aos-duration="1500") Adease Marketing Project
+                .content-client( data-aos="fade-up" data-aos-duration="2000")   
+                    h6.client-text-400 Client 
+                    h6.client-text-700 Adease
+                .content-field( data-aos="fade-up" data-aos-duration="2500")   
+                    h6.client-text-400 Creative Field 
+                    h6.client-text-700 Marketing Landing page, UI/UX Design,  Development
+    section.section-project-about.tt-section 
+        include includes/components/about-project.pug
+        +AboutProject({title: 'Objective', desc: 'Adease Marketing is committed to a 100% Chinese environment. No matter what level you are from beginner to advanced, a team of native teachers will help you quickly grasp the language and fluently use Chinese. Especially for busy people, learning Chinese has become easier than ever.', button: true , imageProject: './assets/images/image-detail-project.png'})
+        +AboutProject({title: 'Challenge', 
+                        desc: 'We have combined design and development style to fit with the behavior of students when searching for the information courses. Regarding the layout, we have met the expectations of customers by showing the neat and simple but still creating confidence for students when finding out information about the center.', 
+                        button: true , 
+                        imageProject: './assets/images/image-detail-project-1.png'})
+    section.section-title-next-project.tt-page-nav.tt-section.tt-animation
+        .tt-pn-link
+            h2.title-next.animation-fly( data-aos="fade-up" data-aos-duration="1000")
+                a(href="#").next-link.pli-title Next project 
+        .tt-pn-image 
+            img(src="./assets/images/image-detail-project-1.png", alt="")

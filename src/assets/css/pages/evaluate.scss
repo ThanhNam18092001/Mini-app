@@ -1,0 +1,280 @@
+.banner-evaluate {
+    width: 100%;
+    font-family: 'Montserrat';
+    padding: 180px 0 100px;
+    text-align: center;
+    color: #0A0C0E;
+    .title1 {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22.4px;
+        color: #64748B;
+    }
+    .title2-container {
+        padding: 12px 0;
+        .title2 {
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 56px;
+        }
+    }
+    .title3-container {
+        padding: 12px 0;
+        .title3 {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22.4px;
+        }
+    }
+    .btn-container {
+        .btn {
+            background-color: #F5F5F5;
+            border-radius: 14px;
+            padding: 4px;
+            .btn-month {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 22.4px;
+                padding: 13px 22px;
+                border-radius: 12px;
+                background-color: #FFFFFF;
+                border: 1px solid #FFFFFF;
+            }
+            .btn-year {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 22.4px;
+                padding: 13px 22px;
+                border-radius: 12px;
+                background-color: #FFFFFF;
+                border: 1px solid #FFFFFF;
+            }
+        }
+    }
+    // ================================
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        .gird-container {
+            display: flex;
+            padding: 40px 100px;
+            .gird1 {
+                width: 25%;
+                .grid-item-title {
+                    height: 223px;
+                }
+                .grid-item {
+                    height: 58px;
+                    display: flex;
+                    padding: 18px 6px;
+                    text-align: start;
+                    p {
+                        margin-right: 5px;
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 22.4px;
+                        a {
+                            color: #BFBFBF;
+                        }
+                    }
+                }
+                .grid-item1-1 {
+                    height: 58px;
+                    background-color: #F3FAFB;
+                    border-radius: 12px 0 0 12px;
+                    display: flex;
+                    padding: 18px 6px;
+                    p {
+                        margin-right: 5px;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 22.4px;
+                        a {
+                            color: #BFBFBF;
+                        }
+                        .mini-app {
+                            color: #5A78FF;
+                            text-decoration: revert;
+                        }
+                    }
+                }
+            }
+            .gird2 {
+                width: 25%;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 22.4px;
+                .grid-item-title {
+                    padding-top: 24px;
+                    .title {
+                        font-size: 18px;
+                        font-weight: 500px;
+                        line-height: 25.5px;
+                        color: #1B9AAA;
+                        margin-top: 12px;
+                    }
+                    .price {
+                        font-size: 30px;
+                        font-weight: 600;
+                        line-height: 42px;
+                        color: #141414;
+                        margin: 12px 0;
+                        a {
+                            font-size: 12px;
+                            font-weight: 400;
+                            line-height: 16.8px;
+                            color: #000000;
+                        }
+                    }
+                    .price2 {
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: #8C8C8C;
+                        margin-bottom: 30px;
+                        a {
+                            font-weight: 700;
+                            span {
+                                font-weight: 400;
+                                .hot {
+                                    font-size: 10px;
+                                    font-weight: 500;
+                                    line-height: 14px;
+                                    color: #FF6F00;
+                                    background: #FFF8F2;
+                                    padding: 4px 8px;
+                                    border-radius: 4px;
+                                    margin-left: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .grid-item {
+                    height: 58px;
+                    display: flex;
+                    padding: 18px 6px;
+                    display: flow-root;
+                    .button-component-profile {
+                        padding: 20px 73px;
+                    }
+                    p {
+                        margin-right: 5px;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 22.4px;
+                        a {
+                            color: #BFBFBF;
+                        }
+                    }
+                }
+                .grid-item1 {
+                    height: 58px;
+                    background-color: #F3FAFB;
+                    padding: 18px 6px;
+                    display: flow-root;
+                    p {
+                        margin-right: 5px;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 22.4px;
+                        a {
+                            color: #BFBFBF;
+                        }
+                    }
+                }
+                .grid-item1-2 {
+                    height: 58px;
+                    background-color: #F3FAFB;
+                    border-radius: 0 12px 12px 0;
+                    padding-top: 18px;
+                }
+                .grid-item-btn {
+                    padding: 37px 16px;
+                    .button-component.btn-header {
+                        padding: 10px 55px;
+                    }
+                }
+                &:hover{
+                    border-radius: 24px;
+                    border: 1px solid #1B9AAA;
+                }
+            }
+        }
+    }
+    // =================================
+}
+.information-evaluate {
+    background-color: #F5F8FB;
+    padding: 80px 0px;
+    text-align: center;
+    font-family: 'Montserrat';
+    color: #141414;
+    margin: 0 100px 140px;
+    border-radius: 24px;
+    padding: 80px 0px 40px;
+    .information-title {
+        margin-bottom: 40px;
+        .title {
+            font-weight: 600;
+            font-size: 50px;
+            line-height: 55px;
+        }
+    }
+    .information-content {
+        margin-bottom: 40px;
+        .content {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+        .btn-container {
+            display: block;
+            margin-left: 43%;
+            margin-top: 40px;
+        }
+    }
+    .information-btn {
+        .btn {
+            padding: 13px 26px;
+            background-color: #1B9AAA;
+            border-radius: 98px;
+            font-size: 16px;
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+    }
+}
+.content-evaluate {
+    padding: 0 205px 140px;
+    font-family: 'Montserrat';
+    color: #141414;
+    .title-container {
+        .title {
+            text-align: center;
+            font-weight: 600;
+            font-size: 50px;
+            line-height: 70px;
+        }
+    }
+    .item-content-container  {
+        display: grid;
+        gap: 10px;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 40px;
+        .item-content {
+            display: flex;
+            .img-item-content {
+                width: 24px;
+                height: 24px;
+            }
+            .text-content {
+                margin-left: 13px;
+                p {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

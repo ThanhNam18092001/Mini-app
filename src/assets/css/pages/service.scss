@@ -1,0 +1,289 @@
+.banner-service {
+    .banner-wrapper {
+        height: 850px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include breakpoint(992) {
+            height: max-content;
+            flex-direction: column-reverse;
+            justify-content: center;
+            margin-top: 150px;
+            align-items: center;
+        }
+        .life-cycle-company  {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include breakpoint(992) { 
+                height: auto;
+            }
+        }
+        .banner-content {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            @include breakpoint(992) { 
+                height: auto;
+                width: 100%;
+                margin: 40px 0;
+            }
+            .content-list {
+                font-family: 'Syne';
+                font-style: normal;
+                font-weight: 500;
+                margin-bottom: 25px;
+                .banner-title {
+                    text-align: left;
+                    letter-spacing: 0.01em;
+                    text-transform: uppercase;
+                    color: #141414;
+                    font-size: 88px;
+                    line-height: 105%;
+                    overflow: hidden;
+                    @include breakpoint(992) {
+                        font-size: 40px;
+                    }
+                    span {
+                        display: block;
+                        position: relative;
+    
+                    }
+                }
+            }
+        }
+    }
+}
+
+.service-description-flow  {
+    .ground-flow {
+        position: relative;
+        .ani-band-parallax  {
+            position: absolute;
+            left: -165px;
+            top: -100px;
+            z-index: -1;
+            @include breakpoint(992) {
+                max-width: 250px;
+                left: -70px;
+                top: -130px;
+             }
+            animation: flySciAnimation 4s ease-in infinite alternate;
+        }
+        &.content-tabline {
+            .flow-content {
+                font-size: 40px;
+            }
+        }
+    }
+    .flow-content {
+        font-family: 'Syne';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 38.4px;
+        text-align: center;
+        color: #141414; 
+        &.ct-service-text, &.ct-work-text {
+            font-size: 32px;
+            @include breakpoint(992) {  
+                font-size: 24px;
+            }
+        }
+        @include breakpoint(992) { 
+            text-align: center !important;
+        }
+        img {
+            width: 24px;
+        }
+    }
+}
+
+.animation-flowing-slice {
+    font-family: 'Syne';
+    font-style: normal;
+    overflow-x: hidden;
+    pointer-events: none;
+    .flow-animationp-text {
+        font-weight: 600;
+        font-size: 130px;
+        line-height: 105%;
+        color: #008253;
+        white-space: nowrap;
+        @include breakpoint(992) { 
+            font-size: 80px;
+        }
+    }
+}
+
+.icon-animation  {
+    -webkit-animation:spin 4s linear infinite;
+		-moz-animation:spin 4s linear infinite;
+		animation:spin 4s linear infinite;
+    @include breakpoint(992) { 
+        display: none;      
+    }
+}
+
+.service-company {
+    font-family: 'Syne';
+    font-style: normal;
+    position: static;
+    .service-header  {
+        position: sticky;
+        top: 150px;
+        padding-right: 10%;
+        @include breakpoint(992) { 
+            padding-right: 0;
+            text-align: center;
+        }
+        .header-title {
+            font-weight: 500;
+            font-size: 80px;
+            line-height: 105%;
+            color: #FFFFFF;
+            @include breakpoint(992) { 
+                font-size: 40px;
+                color: #141414;
+            }
+            @include breakpoint(1025) { 
+                font-size: 64px;
+            }
+        }
+        .header-description {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 130%;
+            color: #E7E7E7;
+            margin: 24px 0;
+            @include breakpoint(992) { 
+                font-size: 18px;
+                color: #141414;
+            }
+        }
+    }
+    .service-section {
+        margin-top: 24px;
+        .service-list {
+                padding: 40px 0;
+                border-bottom: 1px solid #E7E7E7;
+                &:first-child {
+                    padding-top: 0;
+                }
+                @include breakpoint(992) { 
+                    padding: 40px 0;
+                    border-bottom: 1px solid #FEFEFE;
+                }
+            &:last-child {
+                padding-bottom:0;
+                border-bottom: none;
+            }
+            .list-title {
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 110%;
+                letter-spacing: 0.01em;
+                color: #FFFFFF;
+                @include breakpoint(992) { 
+                    font-size: 24px;
+                    color: #141414;
+                }
+            }
+            .list-description {
+                margin: 24px 0;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;
+                color:  #FFFFFF;
+                @include breakpoint(992) { 
+                    font-size: 16px;
+                    color: #141414;
+                }
+            }
+            .list-word  {
+                display: flex;
+                flex-wrap: wrap;
+                padding-left: 0;
+                @include breakpoint(1199) { 
+                    display:block;
+                }
+                .word-item {
+                    list-style-type: disc;
+                    width: calc(49% - 15px);
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 140%;
+                    color:  #FFFFFF;
+                    margin-left: 15px;
+                    margin-bottom: 8px;
+                    @include breakpoint(992) { 
+                        color: #141414;
+                    }
+                    @include breakpoint(768) { 
+                        width: calc(100% - 15px);
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.service-description-flow  {
+    margin-top: 160px;
+    @include breakpoint(992) { 
+        margin-top: 80px;
+    }
+}
+
+.ads-company, .expert-company, .animation-flowing-slice  {
+    margin: 160px 0;
+    @include breakpoint(992) { 
+        margin: 80px 0;
+    }
+}
+
+.service-company  {
+    padding: 160px 0;
+    @include breakpoint(992) { 
+        padding: 80px 0;
+    }
+}
+
+.btn-work-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+
+@-moz-keyframes spin{
+	100%{
+		-moz-transform:rotate(360deg);
+	}
+}
+@-webkit-keyframes spin{
+	100%{
+		-webkit-transform:rotate(360deg);
+	}
+}
+@keyframes spin{
+	100%{
+		-webkit-transform:rotate(360deg);
+		transform:rotate(360deg);
+	}
+}
+
+@keyframes flySciAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50px);
+    }
+}
+

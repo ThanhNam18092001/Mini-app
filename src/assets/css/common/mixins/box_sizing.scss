@@ -1,0 +1,4 @@
+//Example : @include box-sizing(border-box)
+  @mixin box-sizing($box-model) {
+    box-sizing: $box-model;
+  }

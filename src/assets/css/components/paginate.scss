@@ -1,0 +1,30 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    .pagination-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        &.active {
+            border: 2px solid #008253;
+            a.item-link {
+                color: #008253;
+            }
+        }
+        a.item-link {
+            font-family: 'Syne';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            color: rgba(0, 0, 0, 0.85);
+            &:hover {
+                color: #008253;
+            }
+        }
+    }
+}

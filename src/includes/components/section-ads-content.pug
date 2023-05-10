@@ -1,0 +1,11 @@
+mixin sectionAdsContent(data)
+    .ads-content-pursuit
+        .content-left
+            h2.content-left-title( data-aos="fade-up" data-aos-duration="1000") 
+                span= `${data.title}`
+                    if data.titleBold 
+                        strong=data.titleBold
+        .content-right 
+            .content-right-bg 
+                video( width="100%" height="100%" autoplay muted loop playsinline)
+                    source(src=`${data.image}` type="video/mp4")

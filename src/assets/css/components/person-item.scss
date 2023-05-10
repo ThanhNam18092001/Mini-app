@@ -1,0 +1,53 @@
+.section-team-uway {
+    display: flex;
+    // overflow-x: scroll;
+    padding-left: 24px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .person-item  {
+        font-family: 'Syne';
+        font-style: normal;
+        padding: 10px 32px 10px 0;
+        // flex: 1 0 360px ;
+        cursor: pointer;
+        .item-avatar {
+            overflow: hidden;
+            img {
+                transition: .6s ease-in-out;
+                transform: scale(1.1);
+                @include breakpoint(992) {
+                    transform: scale(1);
+                }
+            }
+            &:hover {
+                img {
+                    border-radius: inherit;
+                    transform: scale(1);
+                    border-radius: 30%;
+                    @include breakpoint(992) { 
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+        .item-name {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 130%;
+            display: flex;
+            align-items: center;
+            color: #141414;
+            margin: 24px 0 4px 0;
+        }
+        .item-position {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            display: flex;
+            align-items: center;
+            color: #008253;
+        }
+    }
+}
+

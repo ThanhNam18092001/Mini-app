@@ -1,0 +1,182 @@
+.section-contact-form {
+    margin: 160px 0 160px 0;
+    @include breakpointminmax(600, 992) {
+        margin-top: 300px;
+    }
+    .row {
+        margin: 0 auto;
+
+    }
+    .section-body-title {
+        margin-bottom: 80px;
+        .title {
+            font-family: 'Syne';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 110%;
+            text-align: center;
+            letter-spacing: 0.01em;
+            color: #141414;
+            padding: 0 30px;
+            @include breakpoint(992) {
+                font-size: 32px;
+                padding: 0;
+            }
+            img {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+.form-input {
+    margin-bottom: 40px;
+    label {
+        font-family: 'Syne';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #141414;
+        margin-bottom: 10px;
+        .m--font-danger {
+            color: #DF1212;
+            margin-left: 2px;
+        }
+    }
+    .m-input {
+        appearance: inherit;
+        border-radius: 0;
+        border: none;
+        outline: none;
+        font-family: 'Syne';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        color: #141414;
+        background: transparent;
+        border-bottom: 1px solid #141414;
+        &::placeholder {
+            color: #D0D0D0;
+        }
+        &:focus{
+            outline: none;
+            box-shadow: none;
+            border-bottom: 1px solid #2DD497;
+        }
+    }
+}
+
+.select-contact {
+    margin-bottom: 40px;
+    .label-name {
+        font-family: 'Syne';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #141414;
+        margin-bottom: 10px;
+    }
+    .click-show-dropdow {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #141414;
+        cursor: pointer;
+        .arrow {
+            transition: .2s ease-in;
+        }
+        &.active {
+            border-bottom: 1px solid #2DD497;
+            .arrow {
+                transform: rotate(180deg);
+            }
+        }
+        .time-text {
+            font-family: 'Syne';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 130%;
+            color: #D0D0D0;
+            padding: 15px;
+        }
+        & .dropdown{
+            position: absolute;
+            left: 0;
+            top: 105%;
+            width: 100%;
+            border-radius: 5px;
+            background-color: #FFFEFD;
+            max-height: 0;
+            display: flex;
+            overflow: hidden;
+            flex-direction: column;
+            -webkit-transition: all 0.1s 0s ease-in-out;
+            -moz-transition: all 0.1s 0s ease-in-out;
+            -o-transition: all 0.1s 0s ease-in-out;
+            transition: all 0.1s 0s ease-in-out;
+            z-index: 99999;
+            padding-left: 0;
+            &.active{
+                max-height: 100vh;
+            
+            }
+            .dropdown-item {
+                padding: 15px 0 15px 16px;
+                &:not(:last-child) {
+                    border-bottom: 1px solid #dedcdb;
+                }
+                .get-valua-text {
+                    font-family: 'Syne';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 130%;
+                    color: #141414;
+                }
+            }
+            
+        }
+    }
+}
+
+.attachment-file {
+    label{
+        cursor: pointer;
+        span {
+            font-family: 'Syne';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 140%;
+            color: #141414;
+            margin-left: 8px;
+        }
+    }
+    .file-block {
+        margin-top: 24px;
+        .file-info {
+            font-family: 'Syne';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 140%;
+
+            color: #141414;
+            margin-bottom: 8px;
+            .icon-delete {
+                cursor: pointer;
+                margin-right: 13px;
+            }
+        }
+    }
+}
+
+.btn-submit-form  {
+    display: flex;
+    justify-content: center;
+    margin-top: 86px;
+}

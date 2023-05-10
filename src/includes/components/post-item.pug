@@ -1,0 +1,12 @@
+mixin postItem(data)
+    .post-item
+        .item-image 
+            a(href="./blog-detail.html") 
+                img(src=`${data.image}`, alt=`${data.name}`)
+        .item-tab-time 
+            .tab
+                a(href="./blog-detail.html").tab-link  Dev Source 
+            .time 
+                span 24 Jun 
+        h2.item-title 
+            a(href="#")=data.name  

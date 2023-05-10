@@ -1,0 +1,16 @@
+extends includes/layout/layout.pug
+block pages 
+    section.banner-contact 
+        .banner-wrapper 
+            .banner-left( data-aos="fade-up" data-aos-duration="1000") 
+                .banner-content 
+                    h1.banner-title 
+                        span DON’T BE
+                    h1.banner-title 
+                        span A STRANGER  
+            .banner-right 
+                video(width="100%" height="100%" autoplay muted loop playsinline)
+                    source(src="./assets/video/contact vid.mp4" type="video/mp4")
+    .container 
+        include includes/components/form-contact.pug
+        +FormContact()

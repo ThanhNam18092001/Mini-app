@@ -1,0 +1,88 @@
+.banner-work-detail {
+    height: 850px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .container {
+        height: 100%;
+        .work-detail-content  {
+            font-family: 'Syne';
+            font-style: normal;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 65%;
+            @include breakpoint(992) {
+                width: 100%;
+                justify-content: end;
+                padding-bottom: 80px;
+            }
+            .content-title {
+                font-family: 'Syne';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 110%;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.01em;
+                color: #141414;
+                @media (prefers-color-scheme: dark) { 
+                    color: #7e7c7c;
+                }
+                @include breakpoint(992) {
+                    font-size: 32px;
+                }
+            }
+
+            .content-client {
+                margin: 40px 0;
+            }
+            .client-text-400 {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 140%;
+                color: #BDBDBD;
+                @media (prefers-color-scheme: dark) { 
+                    color: #7e7c7c;
+                }
+            }   
+            .client-text-700 {
+                font-size: 16px;
+                line-height: 140%;
+                color: #141414;
+                font-weight: 400;
+                @media (prefers-color-scheme: dark) { 
+                    color: #7e7c7c;
+                }
+            }
+        }
+    }
+}
+
+.section-title-next-project {
+    margin: 160px auto;
+    @include breakpoint(992) {
+        margin:  80px auto;
+    }
+    .title-next {
+        font-family: 'Syne';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 110%;
+        letter-spacing: 0.01em;
+        text-align: center;
+        overflow: hidden;
+        margin: auto;
+        @include breakpoint(992) {
+            font-size: 40px;
+        }
+        .next-link {
+            display: block;
+            position: relative;
+            color: #141414;
+        }
+    }
+}

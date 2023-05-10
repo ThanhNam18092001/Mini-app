@@ -1,0 +1,109 @@
+.post-item {
+    margin-bottom: 80px;
+    .item-image  {
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+            transform: scale(1.1);
+            transition: .3s ease-in-out;
+            &:hover {
+                transform: scale(1);
+            }
+        }
+    }
+    .item-tab-time  {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 16px 0;
+        .time {
+            font-family: 'Syne';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.01em;
+            color: #9D9D9D;
+        }
+        .tab-link {
+            font-family: 'Syne';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            color: #141414;
+            letter-spacing: 0.01em;
+        }
+    }
+    .item-title {
+        font-family: 'Syne';
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        display: flex;
+        align-items: center;
+        a {
+            font-size: 24px;
+            color: #141414;
+        }
+    }
+}
+
+.blog-list {
+    margin-bottom: 160px;
+    @include breakpoint(992) { 
+        margin-bottom: 0px;
+    }
+    .row {
+        justify-content: space-between;
+    }
+    .col-xl-4 {
+        @include min-breakpoint(1200) {
+            width: 31%;
+        }
+    }
+    .pagination {
+        display: none;
+        @include breakpoint(992) { 
+            display: flex;
+        }
+    }
+}
+
+.tagline {
+    .tagline-content {
+        font-family: 'Syne';
+        font-style: normal;
+        .content-title {
+            font-weight: 600;
+            font-size: 130px;
+            line-height: 105%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            color: #141414;
+            overflow: hidden;
+            @include breakpoint(992) {
+                font-size: 70px;
+            }
+            @include breakpoint(768) {
+                font-size: 40px;
+            }
+            span {
+                display: block;
+                position: relative;
+
+            }
+        }
+    }
+    .tabline-btn-work-us {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 80px 0 160px 0;
+    }
+}

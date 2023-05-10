@@ -1,0 +1,170 @@
+.banner-work {
+    .banner-wrapper {
+        height: 850px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        
+        @include breakpoint(992) { 
+            height: 650px;
+            // justify-content: start;
+            align-items: end;
+            flex-direction: row;
+        }
+
+        .default-inline {
+            display: flex;
+            align-items: flex-end;
+        }
+        .gif-icon {
+            display: inline-block;
+            width: 2em;
+            height: 2em;
+            transform: translateY(30px);
+            @include breakpoint(992) {
+                width: 7em;
+                height: 7em;
+                    position: absolute;
+                    top: -350px;
+                    left: 50%;
+                    transform: translateX(-50%);
+             }
+            img {
+                max-width: 100%;
+            }
+        }
+        .parallax-animation {
+            margin-top: 100px;
+            transition: .3s ease-out;
+            animation: jmubingIcon 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+            @include breakpoint(992) { 
+                display: none;
+            }
+         }
+        .banner-content  {
+            font-family: 'Syne';
+            font-style: normal;
+            @include breakpoint(992) { 
+                margin: 150px 0 40px 0;
+            }
+            .banner-title  {
+                font-weight: 500;
+                font-size: 130px;
+                line-height: 105%;
+                color: #141414;
+                overflow: hidden;
+                @include breakpoint(1199) {
+                    font-size: 100px;
+                }
+                @include breakpoint(992) { 
+                    font-size: 37px;
+                    overflow: visible;
+                }
+                &:last-child{
+                    @include breakpoint(1199) {
+                        padding-right:10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ground-slice-flowing-text {
+    transform: translateY(-30px);
+}
+
+.service-animation-flowing-slice {
+    font-family: 'Syne';
+    font-style: normal;
+    overflow-x: hidden;
+    pointer-events: none;
+    @include breakpoint(992) { 
+        height: 115px;
+    }
+    .flow-animationp-text {
+        font-weight: 600;
+        font-size: 130px;
+        line-height: 105%;
+        color: #9D9D9D;
+        white-space: nowrap;
+        &.text-green {
+            color: #008253;
+        }
+       
+        @include breakpoint(992) { 
+            font-size: 80px;
+        }
+    }
+}
+
+.work-info, .work-tabline {
+    margin-bottom: 160px;
+    @include breakpoint(992) { 
+        margin-bottom: 80px;
+    }
+}
+
+.project-list {
+    margin-bottom: 160px;
+    @include breakpoint(992) { 
+        margin-bottom: 0px;
+    }
+}
+
+
+@keyframes jmubingIcon {
+    0% {
+        transform: translateY(0);
+      }
+      60% {
+          transform: translateY(7px);
+      }
+      100% {
+        opacity: .4;
+        transform: translateY(20px);
+      }
+}
+
+  /* ------------------------------------------------------------- *
+ * Scrolling text
+/* ------------------------------------------------------------- */
+
+.service-animation-flowing-slice {
+    display: flex;
+    position: relative;
+    pointer-events: none;
+  }
+  .flow-animationp-text {
+    padding-left: 2vw;
+    font-size: 7.5vw;
+    line-height: 1.1;
+    font-weight: bold;
+    font-weight: 500;
+    color: black;
+    white-space: nowrap;
+    animation-name: tt_scrolling_text;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    /* animation-duration is handled by js. */
+  }
+  .flow-animationp-text:after {
+    content: attr(data-text);
+  }
+  
+  @keyframes tt_scrolling_text {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Animation direction reverse. */
+.scr-text-reverse .flow-animationp-text {
+    animation-direction: reverse;
+}

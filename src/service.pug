@@ -1,0 +1,62 @@
+extends includes/layout/layout.pug
+block pages 
+    section.banner-service.uw-bg(data-color="white")  
+        .container.banner-wrapper
+            .banner-content 
+                .content-list( data-aos="fade-up" data-aos-duration="1000") 
+                    h1.banner-title 
+                        span GO BEYOND
+                    h1.banner-title 
+                        span WHAT’S
+                    h1.banner-title 
+                        span POSSIBLE
+                .icon-animation 
+                    img(src="./assets/icons/smiley-animation.svg", alt="smiley-animation")
+            .life-cycle-company 
+                img(src="./assets/images/service-vector.svg", alt="Life Cycle")
+    section.service-description-flow.uw-bg(data-color="white")   
+        .container 
+            .row
+                .col-xl-8.col-lg-10.col-md-10.col-sm-12.col-12.m-auto  
+                    h6.flow-content.ct-service-text( data-aos="fade-up" data-aos-duration="1500") From your ideas to your own branded products. With Uway, we listen to attack your problems, provide optimal software solutions and turn them into the masterpiece products .
+    section.service-company.uw-bg(data-color="gray-dark")  
+        .container 
+            .row 
+                .col-xl-6.col-lg-6
+                    .service-header 
+                        h2.header-title( data-aos="fade-up" data-aos-duration="1000") Services
+                        p.header-description( data-aos="fade-up" data-aos-duration="1200") We love working for products and services that we find exciting ourselves      . As a result, not only are we able to get your message across.
+                .col-xl-6.col-lg-6
+                    include includes/components/service-section.pug
+                    section.service-section 
+                        +ServiceSection({name: 'Research & Discovery'})
+                        +ServiceSection({name: 'Stragegy & Design Thinking'})
+                        +ServiceSection({name: 'User Experience Design'})
+                        +ServiceSection({name: 'Growing & Scaling'})
+                        +ServiceSection({name: 'Research & Discovery'})
+    section.uw-bg(data-color="white") 
+        include includes/components/animation-rolling-text.pug
+        +animationRollingText()
+    section.expert-company.uw-bg(data-color="white")  
+        .container 
+            .row 
+                .col-xl-5.col-lg-5 
+                    h6.expert-name( data-aos="fade-up" data-aos-duration="1000") We’re expert in 
+                .col-xl-7.col-lg-7
+                    include includes/components/expert-in.pug
+                    .expert-list 
+                        +expertIn({title: 'Hospitality'})
+                        +expertIn({title: 'Food & Beverage'})
+                        +expertIn({title: 'Services'})
+                        +expertIn({title: 'Education'})
+                        +expertIn({title: 'Healthcare'})
+                        +expertIn({title: 'Fintech'})
+    include includes/components/section-ads-content.pug
+    section.ads-company 
+        +sectionAdsContent({title : 'Build an MVP to boost growth, attract investors, and lead the market. Carve your Ideas to product & get funded!', image: './assets/video/services-2.mp4'})
+        .btn-work-us 
+            include includes/components/button.pug
+            +Button({ type : 'link', title: 'Start your journey', svg: true, className: 'brand-green-outline', isReverse: true, link: '#' })
+
+
+                        

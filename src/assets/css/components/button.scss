@@ -1,0 +1,178 @@
+.button-component {
+    outline: none;
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 12px 26px;
+    &.radius-circle {
+        width: 32px;
+        height: 32px;
+        padding: 15px;
+        border-radius: 50%;
+        .button-icon {
+            margin: 0;
+        }
+    }
+    @include breakpointminmax(687,1199) {  
+        margin: 0 auto;
+    }
+    .button-title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 140%;
+        white-space: nowrap;
+        letter-spacing: 1px;
+        @include breakpoint(1199) { 
+            font-size: 18px;
+        }
+    }
+
+    &.btn-header {
+        padding: 10px 20px;
+        .button-title {
+            @include breakpoint(992) {  
+                font-size: 18px;
+            }
+        }
+    }
+
+    .button-sub-title {
+        display: block;
+        font-size: 8px;
+        white-space: nowrap;
+        color: $white;
+    }
+    .button-icon,svg {
+        flex: 0 0 20px;
+        max-width: 20px;
+        margin-right: 8px;
+    }
+
+    &.hide-dropdown-icon {
+        &:after {
+            display: none;
+        }
+    }
+
+    &.reverse {
+        flex-direction: row-reverse;
+
+        .button-icon, svg {
+            margin-right: 0;
+            margin-left: 8px;
+        }
+    }
+
+    &.icon {
+        .button-icon {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &.brand-green {
+        border-color: $brand-green;
+        background: $brand-green;
+        transition: 600ms ease-out;
+        .button-title {
+            color: $white;
+        }
+        &:hover {
+            background: $brand-gray;
+            border-color:  $brand-gray;
+            transform: scale(1.05);
+            .button-title {
+                color: $white ;
+            }
+        }
+    }
+    &.brand-green-outline {
+        border-color: $brand-green;
+        background: transparent;
+        transition: 600ms ease-out;
+        .button-title {
+            color: $brand-green;
+        }
+        &:hover {
+            background: $brand-gray;
+            border-color:  $brand-gray;
+            transform: scale(1.05);
+            .button-title{
+                color: $white;
+            }
+            svg path {
+                fill: $white;
+            }
+        }
+    }
+
+    &.brand-green-transparent {
+        border-color: transparent;
+        background: transparent;
+        transition: 600ms ease-out;
+        .button-title {
+            color: $brand-green;
+        }
+        &:hover {
+            background: $brand-gray;
+            border-color:  $brand-gray;
+            transform: scale(1.05);
+            .button-title {
+                color: $white ;
+            }
+            svg path {
+                fill: $white;
+            }
+        }
+    }
+
+    &.let-talk {
+        width: 120px;
+        height: 120px;
+        background: $brand-green;
+        border-radius: 50%;
+        transition: 300ms ease-out;
+        @include breakpoint(768) {
+            display: none;
+        }
+        .button-title {
+            color: $white;
+        }
+        &:hover {
+            background: $brand-gray;
+            transform: scale(1.1);
+        }
+    }
+
+}
+
+.button-next a {
+    padding: 10px 65px;
+    font-weight: 500;
+}
+
+.button-next a:after {
+    content: '';
+    background-image: url(../../src/img/trace.png);
+    background-size: contain;
+    background-position: center;
+    height: 15px;
+    width: 20px;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 400px) {
+    .btn-header {
+        padding: 5px 10px !important;
+        .button-title {
+            @include breakpoint(992) {  
+                font-size: 9px !important;
+            }
+        }
+    }
+}

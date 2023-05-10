@@ -1,0 +1,6 @@
+mixin Input(data)
+    .form-input 
+        label(for="" class="form-control-label")=data.label 
+            if data.required 
+                span.m--font-danger *
+        input(type=`${data.type}` class="form-control m-input" placeholder=`${data.placeholder}`)

@@ -1,0 +1,227 @@
+extends includes/layout/layout.pug
+block pages 
+    section.banner-evaluate
+        p.title1 BẢNG GIÁ
+        .title2-container   
+            p.title2 Sẵn sàng trải nghiệm với 
+            p.title2 MindHana
+        .title3-container 
+            p.title3 Tất cả các kế hoạch của chúng tôi được thiết kế để giúp bạn tiết kiệm thời gian cho công việc hàng 
+            p.title3 ngày và phát triển doanh nghiệp. Khám phá ngay tất cả các tính năng để tìm gói phù hợp với bạn.
+        .btn-container 
+            .btn
+                button.btn-month(onclick="openCity(event, 'Month')") Theo tháng
+                button.btn-year(onclick="openCity(event, 'Year')") Theo năm
+            .tab-container 
+                #Month.tabcontent
+                    .gird-container     
+                        .gird1 
+                            .grid-item-title 
+                            .grid-item1-1 
+                                p Quản trị hệ thống
+                                img(src="./assets/icons/icon-su.svg", alt="icon")
+                            .grid-item 
+                                p Quản lý chi nhánh
+                                img(src="./assets/icons/icon-su.svg", alt="icon")
+                            .grid-item1-1 
+                                p Tính năng tiêu chuẩn
+                                img(src="./assets/icons/dau-cham-hoi.svg", alt="icon")
+                            .grid-item 
+                                p Link đặt lịch online
+                                img(src="./assets/icons/dau-cham-hoi.svg", alt="icon")
+                            .grid-item1-1 
+                                p Phân quyền
+                                img(src="./assets/icons/dau-cham-hoi.svg", alt="icon")
+                            .grid-item 
+                                p Thông báo 
+                                    a(href="/") (bao gồm 100 SMS)
+                                img(src="./assets/icons/icon-su.svg", alt="icon")
+                            .grid-item1-1 
+                                p Báo cáo
+                                img(src="./assets/icons/dau-cham-hoi.svg", alt="icon")
+                            .grid-item 
+                                p Hệ thống Loyalty
+                                img(src="./assets/icons/dau-cham-hoi.svg", alt="icon")
+                            .grid-item1-1 
+                                p Công cụ Marketing
+                                img(src="./assets/icons/dau-cham-hoi.svg", alt="icon")
+                            .grid-item 
+                                p Phân tích Hành vi khách hàng
+                                img(src="./assets/icons/dau-cham-hoi.svg", alt="icon")
+                            .grid-item1-1 
+                                p Tích hợp API
+                                    a(href="") (có tính phí)
+                                img(src="./assets/icons/dau-cham-hoi.svg", alt="icon")
+                            .grid-item 
+                                p Website giới thiệu
+                                    a(href="/") (1 trang)
+                                img(src="./assets/icons/dau-cham-hoi.svg", alt="icon")
+                            .grid-item1-1 
+                                p 
+                                    a(href="").mini-app Mini App 
+                                    span khách hàng
+                                img(src="./assets/icons/dau-cham-hoi.svg", alt="icon")
+                            .grid-item 
+                        .gird2 
+                            .grid-item-title
+                                img(src="./assets/icons/icon-start.svg", alt="icon")
+                                p.title START
+                                p.price 499.000đ 
+                                    a(href="") / tháng
+                                p.price2 Chỉ 
+                                    a(href="") 15.000đ 
+                                        span  / ngày 
+                            .grid-item1 
+                                p 1 tài khoản
+                            .grid-item 
+                                p 1 cửa hàng
+                            .grid-item1
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item 
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item1 
+                            .grid-item 
+                                p SMS
+                            .grid-item1
+                                p Cơ bản 
+                            .grid-item 
+                                p
+                            .grid-item1 
+                                p
+                            .grid-item 
+                                p
+                            .grid-item1 
+                                p
+                            .grid-item
+                                p 700.000đ / tháng 
+                            .grid-item1 
+                                p 600.000đ / tháng
+                            .grid-item-btn
+                                +Button-Profile({ type : 'link', title: 'Đăng ký ngay', className: 'brand-green-outline', isReverse: false, link: '#' })
+                        .gird2 
+                            .grid-item-title
+                                img(src="./assets/icons/icon-premium.svg", alt="icon")
+                                p.title PREMIUM
+                                p.price 699.000đ 
+                                    a(href="") / tháng
+                                p.price2 Chỉ 
+                                    a(href="") 23.000đ 
+                                        span  / ngày 
+                                            span.hot Gói phổ biến
+                            .grid-item1 
+                                p 3 tài khoản
+                            .grid-item 
+                                p 3 cửa hàng
+                            .grid-item1 
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item 
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item1 
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item 
+                                p SMS
+                            .grid-item1 
+                                p Nâng cao
+                            .grid-item 
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item1     
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item 
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item1 
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item 
+                                p 700.000đ 
+                                    a(href="") / tháng
+                            .grid-item1
+                                p 700.000đ 
+                                    a(href="") / tháng
+                            .grid-item-btn
+                                +Button({ title: 'Đăng ký ngay', className: 'brand-green btn-header', isReverse: true })
+                        .gird2 
+                            .grid-item-title
+                                img(src="./assets/icons/icon-diamond.svg", alt="icon")
+                                p.title DIAMOND
+                                p.price 899.000đ 
+                                    a(href="") / tháng
+                                p.price2 Chỉ 
+                                    a(href="") 29.000đ 
+                                        span  / ngày 
+                            .grid-item1-2 
+                                p 5 tài khoản
+                            .grid-item 
+                                p 5 cửa hàng
+                            .grid-item1-2 
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item 
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item1-2 
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item 
+                                p SMS
+                            .grid-item1-2 
+                                p Nâng cao
+                            .grid-item 
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item1-2 
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item1-2 
+                                img(src="./assets/icons/dung.svg", alt="icon")
+                            .grid-item 
+                                p 700.000đ 
+                                    a(href="")  / tháng
+                            .grid-item1-2 
+                                p 900.000đ 
+                                    a(href="") / tháng
+                            .grid-item-btn 
+                                +Button-Profile({ type : 'link', title: 'Đăng ký ngay', className: 'brand-green-outline', isReverse: false, link: '#' })
+                #Year.tabcontent
+                    h3 Paris
+                    p Paris is the capital of France.
+                
+    section.information-evaluate 
+        .information-title  
+            p.title Nâng tầm thương hiệu 
+            p.title theo cách của bạn 💎
+        .information-content 
+            p.content Tăng trưởng kinh doanh với ứng dụng di động và website được phát triển dành riêng cho doanh
+            p.content nghiệp của bạn. Hãy cho khách hàng trải nghiệm sự khác biệt mà chỉ riêng bạn có!
+            .btn-container  
+                +Button({ title: 'Lên lịch hẹn', className: 'brand-green btn-header', isReverse: true })  
+    section.content-evaluate
+        .title-container    
+            p.title Với MindHana, bạn có thể:
+        .item-content-container 
+            .item-content
+                img(src="./assets/icons/yes1.svg", alt="").img-item-content
+                .text-content 
+                    p Giao diện thân thiện dễ dàng sử 
+                    p dụng cho mọi người
+            .item-content
+                img(src="./assets/icons/yes1.svg", alt="").img-item-content
+                .text-content 
+                    p Không bỏ lỡ bất kỳ lịch đặt hẹn từ 
+                    p khách hàng
+            .item-content
+                img(src="./assets/icons/yes1.svg", alt="").img-item-content
+                .text-content 
+                    p Quản lý và chăm sóc khách hàng
+                    p đơn giản
+            .item-content
+                img(src="./assets/icons/yes1.svg", alt="").img-item-content
+                .text-content 
+                    p Khách hàng đặt lịch hẹn đơn giản 
+                    p ở bất kỳ đâu
+            .item-content
+                img(src="./assets/icons/yes1.svg", alt="").img-item-content
+                .text-content 
+                    p Phát triển mối quan hệ tốt 
+                    p với khách hàng qua chương trình 
+                    p Loyalty.
+            .item-content
+                img(src="./assets/icons/yes1.svg", alt="").img-item-content
+                .text-content 
+                    p Theo dõi hoạt động kinh doanh 
+                    p nhanh chóng

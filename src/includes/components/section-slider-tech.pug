@@ -1,0 +1,7 @@
+mixin SectionSliderTech(data, from)
+    include ../components/tech-item.pug
+    .technology-carousel-auto(data-scroll-speed="30" class=`${from  ? from : ''}`)
+        .automation-scroll(data-text="")
+            each item in data 
+                +TechItem(item)
+            

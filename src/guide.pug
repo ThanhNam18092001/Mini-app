@@ -1,0 +1,61 @@
+extends includes/layout/layout.pug
+block pages 
+  
+  section.section-guide
+    .guide-title Button
+    .guide-section.guide-button.d-flex
+      include includes/components/button.pug
+      .a 
+        +Button({ title: 'Button', icon: './assets/icons/arrow-left.svg', className: 'brand-green', isReverse: true })
+      .b
+        +Button({ title: 'Button', svg: true, className: 'brand-green-outline', isReverse: true })
+      .c
+        +Button({ title: 'Button', svg: true, className: 'brand-green-transparent', isReverse: true })
+      .let-talk 
+        .c
+        +Button({ title: "Let's talk", className: 'let-talk'})
+    section.section-guide
+      include includes/components/service-item.pug
+      .container 
+        .row
+          each item in [1,2,3]
+            .col-4 
+              +serviceItem()
+  section.section-guide
+    div(class="tt-section padding-top-xlg-150 padding-bottom-xlg-150" style="background-color: #f5f5f5 !important")
+      .tt-section-inner
+        div(class="tt-scrolling-text font-italic" data-scroll-speed="15")
+          div(class="tt-scrolling-text-inner text-dark" data-text="Let's create something awesome together! -") | Let's create something awesome together! -
+    section.section-guide
+      include includes/components/post-item.pug
+      include includes/common/data-blog.pug
+      .container 
+        .row
+          each item in dataBlogs
+            .col-4 
+              +postItem(item)        
+    br
+    section.section-guide
+      include includes/components/project-item.pug
+      .container 
+        .row
+          each item in [1,2,3,4]
+            .col-6
+              +projectItem()
+    br
+    section.section-guide
+      include includes/components/partner-logo-item.pug
+      include includes/common/data-logo-partner.pug
+      .container.d-flex.justify-content-evenly
+          each logo in dataLogoPartner
+              +partnerLogoItem(logo)
+    br
+    section.section-guide  
+      include includes/components/timeline.pug
+    br 
+    section.section-guide.form 
+      include includes/components/input.pug
+      include includes/components/select.pug
+      +Input({label: 'Your Name', type: 'text', placeholder: 'Your Name', required: true})
+      +Select({label: "Choose your area"})
+

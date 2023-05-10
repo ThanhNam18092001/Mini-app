@@ -1,0 +1,86 @@
+.contact-us-uway {
+    margin-top: 150px;
+    background-color: white;
+}
+
+.banner-contact {
+    .banner-wrapper {
+        display: flex;
+        align-items: center;
+        max-height: 850px;
+        position: relative;
+        @include breakpoint(992) {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+        .banner-left{
+            flex-basis: 50%;
+            @include breakpoint(992) {
+                flex-basis: 100%;
+                margin-top: 115px;
+                padding-left: 15px;
+            }
+        }
+        .banner-right {
+            flex-basis: 50%;
+            height: auto;
+            position: relative;
+            
+            @include breakpoint(992) {
+                flex-basis: 100%;
+                height: auto;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 150px;
+                    background-color: #E2A6AD;
+                }
+            }
+            video {
+                border-bottom-left-radius: 40%;
+                @include breakpoint(992) {
+                    border-bottom-left-radius: 100%;
+                    margin-top: 140px;
+                }
+            }
+
+        }
+        .banner-content {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            font-family: 'Syne';
+            font-style: normal;
+            font-weight: 500;
+            @include breakpoint(992) { 
+                position: relative;
+            }
+            .banner-title {
+                text-align: left;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: #141414;
+                font-size: 100px;
+                line-height: 105%;
+                overflow: hidden;
+                @include breakpoint(1199) {
+                    font-size: 60px;
+                }
+                @include breakpoint(768) {
+                    font-size: 40px;
+                }
+                span {
+                    display: block;
+                    position: relative;
+
+                }
+            }
+        }
+    }
+}

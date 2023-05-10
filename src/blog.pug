@@ -1,0 +1,32 @@
+extends includes/layout/layout.pug
+block pages 
+    section.banner-blog 
+        .container  
+            .banner-blog-content( data-aos="fade-up" data-aos-duration="1000") 
+                img(src="./assets/images/blog-banner.svg", alt="banner blog")
+        .parallax-animation
+            img(src="./assets/icons/parallax-animation.svg", alt="parallax-animation")
+    section.blog-list
+        .container 
+            .row 
+                include includes/components/post-item.pug
+                include includes/common/data-blog.pug
+                each item in dataBlogs
+                    .col-xl-4.col-lg-4.col-md-6.col-sm-12.col-12 
+                        +postItem(item) 
+                include includes/components/paginate.pug
+                +Panigation()
+    section.tagline 
+        .container 
+            .tagline-content( data-aos="fade-up" data-aos-duration="1000") 
+                h1.content-title 
+                    span Let's make 
+                h1.content-title 
+                    span great work
+                h1.content-title 
+                    span together 
+            .tabline-btn-work-us 
+                include includes/components/button.pug
+                +Button({ type : 'link', title: 'Work with us', svg: true, className: 'brand-green-outline', isReverse: true, link: '#' })
+
+

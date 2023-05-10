@@ -1,0 +1,49 @@
+extends includes/layout/layout.pug
+block pages 
+    section.banner-work 
+        .container.banner-wrapper
+            .banner-content( data-aos="fade-up" data-aos-duration="1000") 
+                h1.banner-title 
+                    span.default-inline DISCOVER OUR 
+                        span.gif-icon
+                            img(src="./assets/images/gif/project.gif", alt="109272-lolo-new-branding 1")
+                h1.banner-title 
+                    span LATEST PROJECTS
+            .parallax-animation
+                img(src="./assets/icons/parallax-animation.svg", alt="parallax-animation")
+    section.service-description-flow.work-info 
+        .container 
+            .row
+                .col-xl-8.col-lg-10.col-md-10.col-sm-12.col-12.m-auto  
+                    .ground-flow 
+                        .ani-band-parallax(data-speed="0.9") 
+                            img(src="./assets/icons/stories circle.svg", alt="stories circle")
+                        h6.flow-content.ct-work-text( data-aos="fade-up" data-aos-duration="1500") We believe that professionalism and meticulousness in every small detail create the final success of the project  <img src="./assets/icons/Smiling Face With Sunglasses.svg" alt="icon text"/> Many clients come to us and accompany us for a long time, we believe about their business as they care. <br/> <br/> We are proud of each product that we perfect and happy when our clients feel satisfied with the services we provide.
+    section.project-list 
+        include includes/components/project-item.pug
+        .container 
+            .row
+                each item in [1,2,3,4,5,6]
+                    .col-xl-6.col-lg-6.col-md-6.col-sm-12.col-12
+                        +projectItem()
+    section.ground-slice-flowing-text
+        .service-animation-flowing-slice(data-scroll-speed="15")
+            h1.flow-animationp-text.to-right(data-text="Hospitality Food & Beverage Fintech") 
+                span Hospitality  <span> <img src="./assets/icons/heart-side.svg" alt="icon text"/></span>  
+                span Food & Beverage <span> <img src="./assets/icons/heart-side.svg" alt="icon text"/></span>  
+                span Fintech  
+        .service-animation-flowing-slice.scr-text-reverse(data-scroll-speed="15")
+            h1.flow-animationp-text.to-right(data-text="Hospitality Food & Beverage Fintech") 
+                span Healthcare  <span> <img src="./assets/icons/circle.svg" alt="icon text"/></span>  
+                span Services <span> <img src="./assets/icons/circle.svg" alt="icon text"/></span>  
+                span Education  
+    section.service-description-flow.work-tabline 
+        .container 
+            .row
+                .col-xl-6.col-lg-10.col-md-10.col-sm-12.col-12.m-auto  
+                    .ground-flow.content-tabline( data-aos="fade-up" data-aos-duration="1500") 
+                        h6.flow-content Building big ideas <span> <img src="./assets/icons/heart-red.svg" alt="icon text"/></span>  
+                        h6.flow-content  No matter how big the company
+            .btn-work-us 
+                include includes/components/button.pug
+                +Button({ type : 'link', title: 'Work with us', svg: true, className: 'brand-green-outline', isReverse: true, link: '#' })

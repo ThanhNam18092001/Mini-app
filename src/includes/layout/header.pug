@@ -1,0 +1,20 @@
+include ../components/button.pug
+header.header-layout#tt-header 
+    .container 
+        .header-menu 
+            .header-left    
+                .header-logo.icon 
+                    a(href="/")
+                        img(src="./assets/icons/logo.svg", alt="logo")
+                .header-test
+                    a(href="/").item-link Trang chủ
+                    a(href="/evaluate.html").item-link Bảng giá
+                    a(href="/").item-link Liên hệ
+            .header-right 
+                .header-button 
+                    include ../components/button-profile.pug
+                    +Button-Profile({ type : 'link', title: 'Đăng ký', className: 'brand-green-outline', isReverse: false, link: '#' })
+                    +Button({ title: 'Trải nghiệm ngay', className: 'brand-green btn-header', isReverse: true })
+           
+
+

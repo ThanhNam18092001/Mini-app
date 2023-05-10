@@ -1,0 +1,72 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    meta(name="theme-color" content="#FFF")
+    title WP API
+    link(rel="icon" href="./assets/images/logo.png" type="image/icon type")
+    //- Bootstrap CSS
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" >
+
+    //- OwlCarousel CSS
+    link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css")
+
+    //- Style CSS
+    link(rel="stylesheet" type="text/css" href="./assets/css/style.css")
+
+    //- FontAwsome
+    link(rel="stylesheet" type="text/css" href="./assets/css/all.min.css")
+
+    link(rel="stylesheet", href="./assets/css/aos.css")
+
+    block head
+
+  body.tt-magic-cursor.tt-smooth-scroll.tt-header-fixed.tt-transition
+    main#body-inner
+      #page-transition
+        .ptr-overlay
+        .ptr-preloader 
+          .logo-load
+            img(src="./assets/icons/logosymbol.svg", alt="Logo Symbol" width="140px" height="64px")
+        .logo-load.spinning
+      #magic-cursor
+            #ball
+      include header.pug
+      #scroll-container 
+        #page-header.uway-desktop-body.ph-content-parallax
+          block pages
+        .let-talk-btn 
+          include ../components/button-profile.pug
+          +Button-Profile({ type : 'link', icon: "./assets/icons/Icon-top.svg", className: 'brand-green-outline', isReverse: false, link: '#' })
+        include footer.pug
+ 
+
+
+    //- jQuery
+    script(src="./assets/js/jquery.min.js") 
+
+    //- Bootstrap JS
+    script(src="./assets/js/bootstrap.bundle.min.js")
+
+    //- OwlCarousel JS
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js") 
+
+    block scripts
+
+    script( src="./assets/js/gsap.min.js")
+    script( src="./assets/js/ScrollTrigger.min.js")
+    script( src="./assets/js/jquery.mousewheel.min.js")
+    script( src="./assets/js/smooth-scrollbar.js")
+    script( src="./assets/js/aos.js")
+
+    script( src="./assets/js/tab.js")
+
+    //- Java Script
+    script(src="./assets/js/main.js")
+
+
+
+
+

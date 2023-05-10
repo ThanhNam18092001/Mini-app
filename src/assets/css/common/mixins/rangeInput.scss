@@ -1,0 +1,17 @@
+@mixin rangeThumb {
+    width: 10px;
+    height: 10px;
+    margin: -3px 0 0;
+    border-radius: 50%;
+    background-color: $brand-D4B26B;
+    cursor: pointer;
+    border: 0 !important;
+}
+
+@mixin rangeTrack{
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background-color: $gray-D1D1D1;
+    border-radius: 3px;
+}

@@ -1,0 +1,82 @@
+extends includes/layout/layout.pug
+block pages 
+    section.banner-about
+        .container  
+            .banner-about-content( data-aos="fade-up" data-aos-duration="1200")   
+                img(src="./assets/icons/banner-about-text.svg", alt="banner about")
+                .video-gif
+                    video(autoplay muted loop playsinline)
+                        source(src="./assets/video/about-1.mp4" type="video/mp4")
+    section.section-about-video     
+        video( width="100%" height="100%" autoplay muted loop playsinline)
+            source(src="./assets/video/about.mp4" type="video/mp4")
+    section.service-description-flow.work-info 
+        .container 
+            .row
+                .col-xl-8.col-lg-8.col-md-10.col-sm-12.col-12.ml-auto  
+                    .ground-flow 
+                        .ani-band-parallax(data-speed="0.9") 
+                            img(src="./assets/icons/stories circle.svg", alt="stories circle")
+                        h6.flow-content.text-left( data-aos="fade-up" data-aos-duration="2000")  We are Uway Technology – a consulting company specializing in outsourcing solutions with integrity, high quality and scalability. We are one of the pioneers of the new generation, enthusiastic, passionate about creativity and constantly developing technology. <br/> <br/> At Uway Technology, we start with listening, understanding, contributing ideas and proposing optimal solutions, in order to create unique software products for each brand and innovative idea.
+    section.ground-slice-flowing-text.uw-bg(data-color="white") 
+        .service-animation-flowing-slice(data-scroll-speed="20")
+            h1.flow-animationp-text.to-right(data-text="Hospitality - Food & Beverage - Fintech").text-green
+                span UX Stragegy  <span> <img src="./assets/icons/heart.svg" alt="icon text"/></span>  
+                span Outsourcing Software <span> <img src="./assets/icons/heart.svg" alt="icon text"/></span>  
+    section.section-mission-vision.uw-bg(data-color="gray-dark")  
+        .container 
+            .content-header 
+                .row 
+                    .col-xl-7.col-lg-6.col-md-12.col-sm-12.col-12
+                        .content-header-title 
+                            h1.title( data-aos="fade-up" data-aos-duration="1000")  Mission & Vision
+                    .col-xl-5.col-lg-6.col-md-12.col-sm-12.col-12 
+                        .content-header-description( data-aos="fade-up" data-aos-duration="1200")  
+                            p.description From the moment our company was founded, we have helped our clients find exceptional solutions for their businesses  <span data-aos="fade-up" data-aos-duration="2000"> <img src="./assets/icons/Smiling Face With Sunglasses.svg" alt="icon text"/></span> , creating memorable brands and digital products. Our expertise grows with each year, and our accumulated experience empowers us to develop products exactly as they should be.
+            .content-body 
+                .row.justify-content-center 
+                    .col-xl-5.col-lg-5.col-md-6.col-sm-12.col-12
+                        .content-body-left 
+                            img(src="./assets/images/about.png", alt="") 
+                    .col-xl-5.col-lg-5.col-md-6.col-sm-12.col-12 
+                        .content-body-right
+                            img(src="./assets/images/about-1.png", alt="") 
+            .content-footer 
+                .row 
+                    .col-xl-8.col-lg-12.col-md-10.col-sm-12.col-12.m-auto
+                        .content-footer-list.anim-fadeinup 
+                            h2.footer-list-title( data-aos="fade-up" data-aos-duration="1500") Simply put<span class="title-lower">, we darewhat others don't<span>   
+                            h6.footer-list-description( data-aos="fade-up" data-aos-duration="2000")   We make things, and we're awesome at it <span data-aos="fade-up" data-aos-duration="2000"> <img src="./assets/icons/Smiling Face With Sunglasses.svg" alt="icon text"/></span>. Uway is a tight-knit team of experts who are ready to tackle the most intricate puzzles when it comes to websites and mobile apps development. We love what we do and we bet on the success of each and every project we undertake.
+    section.section-values-company-uway.uw-bg(data-color="white")  
+        include includes/components/values-accordion.pug
+        +ValuesAccordion()
+    section.section-pro-team.ani-text 
+        .container 
+            .row 
+                .col-xl-7.col-lg-7.col-md-10.col-sm-12 
+                    .team-content-title( data-aos="fade-up" data-aos-duration="1000")
+                        h2.team-title 
+                            span The people 
+                        h2.team-title    
+                            span(class="title-lower") that make it happen
+        .section-team-uway.mySwiper.swiper
+            .swiper-wrapper
+                include includes/components/person-item.pug
+                include includes/common/data-team.pug
+                each item in teamUways
+                    +PersonItem(item)
+    section.section-relationships-base 
+        .container 
+            .section-header-title.fz-relation 
+                h2.title-us 
+                    span Relationships 
+                h2.title-us
+                    span(class="title-us-blur")  based on trust
+            include includes/components/partner-logo-item.pug
+            include includes/common/data-logo-partner.pug
+            .logo-relationships.d-flex
+                each logo in dataLogoPartner
+                    +partnerLogoItem(logo)
+            .explore-more 
+                +Button({type: 'link', link: '#' ,title: 'All projects', svg: true , className: 'brand-green-outline', isReverse: true })
+

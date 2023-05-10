@@ -1,0 +1,47 @@
+.ads-content-pursuit {
+    margin-left: auto;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include breakpoint(992) { 
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .content-left {
+        width: 50%;
+        @include breakpoint(992) { 
+            width: 100%;
+        }
+        .content-left-title {
+            font-family: 'Syne';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 110%;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.01em;
+            color: #141414;
+            @include breakpoint(992) { 
+                font-size: 24px;
+                padding: 40px 25px;
+                text-align: center;
+            }
+            @include breakpoint(1199) { 
+                font-size: 24px;
+            }
+        }
+    }
+    .content-right {
+        width: 45%;
+        @include breakpoint(992) { 
+            width: 100%;
+        }
+        .content-right-bg  {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
